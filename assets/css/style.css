@@ -43,3 +43,67 @@ table {
     box-sizing: border-box;
 }
 /* -----ここから下に記述してください----- */
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(000,000,000,.5);
+}
+.header__bg {
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.header__logo a {
+    font-family: cursive;
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.header__cat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__cat input,.header__cat label {
+    display: none;
+}
+
+.header__nav__list {
+    display: flex;
+}
+
+.header__nav--item span {
+    position: relative;
+}
+
+.header__nav--item span::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0;
+    transition: all .8s cubic-bezier(.19,1,.22,1);
+    transition-timing-function:cubic-bezier(.19,1,.22,1)
+}
+
+.header__nav--item:hover span::after {
+    opacity: 1;
+    left: 0;
+    width: 100px;
+}
+
+.header__nav a {
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    color: #fff;
+}
