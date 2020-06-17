@@ -144,4 +144,86 @@ header
     color: #fff;
     text-shadow: 10px 10px 5px #000;
 }
+/* 
+共通クラス
+*/
 
+.mainContent__title {
+    font-family: fantasy;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.mainContent__title::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    border-bottom: 2px solid #000;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 
+---------------
+コンセプト
+---------------
+*/
+.mainContent__inner {
+    width: 1080px;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.concept__cat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.concept__img {
+    width: calc(50% - 40px);
+}
+
+.concept__img > img {
+    width: 100%;
+}
+.concept__text {
+    width: calc(50% - 40px);
+    height: 630px;
+    overflow-y: auto;
+}
+
+.mainContent__subTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.mainContent__subTitle::before ,
+.mainContent__subTitle::after {
+    display: inline-block;
+    content: "";
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+    vertical-align: 5px;
+}
+
+.mainContent__subTitle::before {
+    margin-right: 8px;
+}
+
+.mainContent__subTitle::after {
+    margin-left: 8px;
+}
+
+.concept__sentence p {
+    margin-bottom: 16px;
+}
